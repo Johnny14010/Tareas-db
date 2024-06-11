@@ -89,7 +89,7 @@ WHERE city LIKE '%a%';
 
 
 - Captura:
-![[Pasted image 20240530160309.png]]
+[![[Pasted image 20240530160309.png]]](https://github.com/Johnny14010/Tareas-db/blob/main/CAPTURAS/9.jpg?raw=true)
 
 
 
