@@ -10,7 +10,7 @@ JOIN client c
 ON c.id= i.client_id;
 
 - Captura:
-![alt text](1v.png)
+
 
 
 ## 2. Guardar la vista de factura para buscarlo solo con select:
