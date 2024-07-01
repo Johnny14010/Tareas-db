@@ -10,7 +10,7 @@ JOIN client c
 ON c.id= i.client_id;
 
     Captura:
-![alt text](1v.png)
+https://github.com/Johnny14010/Tareas-db/blob/main/TAS10/capturas/1v.png?raw=true
 
 
 Guardar la vista de factura para buscarlo solo con select
