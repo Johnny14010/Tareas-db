@@ -1,0 +1,68 @@
+Tarea TAS11 - vistas
+INVOICE-VIEW
+Visualizar la tabla vista antes de crear
+
+    Sentencia:
+
+SELECT i.id, i.code, i.created_at, i.total, c.fullname
+FROM invoice i 
+JOIN client c 
+ON c.id= i.client_id;
+
+    Captura:
+
+Captura de pantalla
+Guardar la vista de factura para buscarlo solo con select
+
+    Sentencia:
+
+CREATE VIEW invoice_view AS
+SELECT i.id, i.code, i.created_at, i.total, c.fullname
+FROM invoice i 
+JOIN client c 
+
+    Captura:
+
+Captura de pantalla
+Buscar con Seleccionar el factura.view
+
+    Sentencia:
+
+SELECT * FROM invoice_view;
+
+    Captura:
+
+Captura de pantalla
+DETAIL.VIEW
+Visualizar el view de detail para buscarlo solo con seleccion
+
+    Sentencia:
+
+SELECT d.id, d.quantity, p.description, d.price, d.quantity * p.price AS subtotal
+FROM detail d JOIN product p
+ON p.id = d.product_id;
+
+    Captura:
+
+Captura de pantalla
+Guardar el view de detalle para buscarlo solo con seleccion
+
+    Sentencia:
+
+CREATE VIEW detail_view AS
+SELECT d.id, d.quantity, p.description, d.price, d.quantity * p.price AS subtotal
+FROM detail d JOIN product p
+ON p.id = d.product_id;
+
+    Captura:
+
+Captura de pantalla
+Buscar con Seleccionar el detalle.view
+
+    Sentencia:
+
+SELECT * FROM detail_view;
+
+    Captura:
+
+Captura de pantalla
