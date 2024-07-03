@@ -29,3 +29,26 @@ Captura:
                               DB EVENT
 
  1. Crear dos ejemplo con la base de datos event. Uno con subconsulta en SELECT y otro con subconsulta  en WHERE
+Subconsulta en SELECT:
+SELECT 
+    c.name AS conference_name,
+    c.date AS conference_date,
+    c.number_of_attendees,
+    (SELECT COUNT(*) FROM registrations r WHERE r.conference_id = c.conference_id) AS total_registrations
+FROM 
+    conferences c;
+
+Captura: 
+
+
+Subconsulta  en WHERE:
+SELECT 
+    e.name AS events_name,
+    e.date AS events_date,
+    e.city
+FROM 
+    events e
+WHERE 
+    e.city IN (SELECT c.name FROM conferences c WHERE c.number_of_attendees > 100);
+
+Captura: 
