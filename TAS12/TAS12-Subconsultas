@@ -6,13 +6,15 @@ SELECT  c.nombre_cliente, c.direccion, (SELECT COUNT(*) FROM public.facturas f W
 
 
 Captura: 
-![alt text](invoice1.jpg)
+![alt text](invoice1.png)
 2. Listar nombre y correo de los clientes junto a su compra mas cara realizada.
 Sentencia:
 SELECT  c.nombre_cliente AS nombres, c.correo, (SELECT MAX(f.total) FROM public.facturas f WHERE f.id_cliente = c.id_cliente) AS total_mas_alto FROM  public.clientes c;
 
 
 Captura: 
+![alt text](invoice2.png)
+
 
 3. Listar las facturas donde sus totales sean mayores al promedio de las facturas
 Sentencia: 
@@ -20,4 +22,10 @@ SELECT   f.fecha_factura, f.total FROM     public.facturas f WHERE f.total > (SE
 
 
 Captura: 
-![alt text](CAPTURAS/invoice3.png)
+![alt text](invoice3.png)
+
+
+
+                              DB EVENT
+
+ 1. Crear dos ejemplo con la base de datos event. Uno con subconsulta en SELECT y otro con subconsulta  en WHERE
