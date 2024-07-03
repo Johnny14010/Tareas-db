@@ -39,7 +39,7 @@ FROM
     conferences c;
 
 Captura: 
-
+![alt text](invoice4.png)
 
 Subconsulta  en WHERE:
 SELECT 
@@ -52,3 +52,4 @@ WHERE
     e.city IN (SELECT c.name FROM conferences c WHERE c.number_of_attendees > 100);
 
 Captura: 
+![alt text](invoice5.png)
