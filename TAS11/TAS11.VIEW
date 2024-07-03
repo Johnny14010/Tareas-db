@@ -10,6 +10,7 @@ JOIN client c
 ON c.id= i.client_id;
 
 - Captura:
+![alt text](capturas/1v.png)
 
 
 
@@ -22,14 +23,14 @@ FROM invoice i
 JOIN client c 
 
 - Captura:
-
+![alt text](capturas/2v.png)
 
 ## 3. Buscar con Seleccionar el factura.view:
 
 - Sentencia: 
 SELECT * FROM invoice_view;
 - Captura:
-
+![alt text](capturas/3v.png)
 
 ## 4. DETAIL.VIEW
 Visualizar el view de detail para buscarlo solo con seleccion
@@ -39,7 +40,7 @@ FROM detail d JOIN product p
 ON p.id = d.product_id;
 
 - Captura:
-
+![alt text](capturas/4v.png)
 
 ## 5. Guardar el view de detalle para buscarlo solo con seleccion:
 - Sentencia: 
@@ -49,9 +50,10 @@ FROM detail d JOIN product p
 ON p.id = d.product_id;
 
 - Captura:
-
+![alt text](capturas/5v.png)
 
 ## 6. Buscar con Seleccionar el detalle.view:
 - Sentencia: 
 SELECT * FROM detail_view;
 - Captura:
+![alt text](capturas/6v.png)

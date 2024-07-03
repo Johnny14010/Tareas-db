@@ -6,7 +6,7 @@ SELECT  c.nombre_cliente, c.direccion, (SELECT COUNT(*) FROM public.facturas f W
 
 
 Captura: 
-
+![alt text](CAPTURAS/invoice1.png)
 
 2. Listar nombre y correo de los clientes junto a su compra mas cara realizada.
 Sentencia:
@@ -14,11 +14,11 @@ SELECT  c.nombre_cliente AS nombres, c.correo, (SELECT MAX(f.total) FROM public.
 
 
 Captura: 
-
+![alt text](CAPTURAS/invoice2.png)
 3. Listar las facturas donde sus totales sean mayores al promedio de las facturas
 Sentencia: 
 SELECT   f.fecha_factura, f.total FROM     public.facturas f WHERE f.total > (SELECT AVG(total) FROM public.facturas);
 
 
 Captura: 
-
+![alt text](CAPTURAS/invoice3.png)
